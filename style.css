@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background-color: rgba(171, 242, 242, 0.786);
+
+}
+.container{
+    max-width: 500px;
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    padding: 25px;
+    margin: 50px auto;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px  5px 10px rgba(0,0,0,0.1);
+}
+.container .input-field{
+    position: relative;
+    height: 64px;
+    width: 100%;
+}
+
+.input-field textarea{
+    height: 100%;
+    width:100%;
+    outline:none;
+    border: 1px solid #ccc;
+    border-radius: 5px ;
+    padding: 18px 45px 18px 15px;
+    font-weight: 18px;
+    font-size: 18px;
+    resize:none;
+
+}
+
+.input-field textarea:focus{
+    border-color:rgb(0, 0, 255);
+}
+
+textarea::-webkit-scrollbar{
+    display: none;
+}
+
+textarea .note-icon{
+    position: absolute;
+    top:50%;
+    right: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 2px;
+    color:rgb(109, 109, 109);
+}
+
+.input-field textarea:focus ~ .note-icon{
+    color:rgb(0, 0, 255);
+}
+
+.container .todolists{
+    max-height: 250px;
+    overflow-y: auto;
+    margin-top: 20px;
+    padding-right:10px;
+}
+
+.todolists .list{
+    display: flex;
+    align-items: center;
+    list-style:none;
+    background-color: #ededed;
+    padding:20px 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.todolists .list input{
+    height: 16px;
+    min-width: 16px;
+    accent-color: blue;
+    pointer-events: none;
+}
+
+
+.todolists .list .task{
+    margin: 0 30px 0 15px;
+    word-break: break-all;
+}
+.list input:checked ~ .task{
+    text-decoration: line-through;
+}
+
+.todolists .list svg{
+    position: absolute;
+    top:50%;
+    right: 15px;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color:rgb(109, 109, 109);
+    padding:2px;
+    opacity: .6;
+    display: none;
+}
+.todolists .list:hover svg{
+    display: inline-flex;
+}
+
+.todolists .list svg:hover{
+    opacity: 1;
+}
+
+
+.container .pending-tasks{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top:25px;
+
+}
+.pending-tasks span{
+    color:gray;
+}
+
+.pending-tasks .clear-button{
+    padding: 6px 12px;
+    outline: none;
+    border:none;
+    background-color: rgba(0, 0, 255, 0.606);
+    color:white;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.clear-button:hover{
+    background-color:blue;
+}
+
+
+@media screen and (max-width: 350px){
+    
+    
+}
